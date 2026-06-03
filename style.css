@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f3b24;
+  color: #243246;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.cover {
+  min-height: 100vh;
+  background: radial-gradient(circle, #1f5a36, #0b2e1c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope {
+  width: 560px;
+  max-width: 86%;
+  min-height: 280px;
+  border: 2px solid #6b7a3d;
+  background: #164d2d;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  padding: 155px 40px 35px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 280px solid transparent;
+  border-right: 280px solid transparent;
+  border-top: 150px solid rgba(255,255,255,0.08);
+}
+
+.envelope p {
+  color: #c49a4a;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.envelope h1 {
+  color: #d3a856;
+  font-size: 23px;
+  margin-top: 10px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+}
+
+.hint {
+  color: #b7924d;
+  margin-top: 35px;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.card {
+  min-height: 100vh;
+  background: #0f3b24;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.paper {
+  width: 760px;
+  max-width: 95%;
+  background: #f7efe1;
+  padding: 60px;
+  border-radius: 80px 80px 35px 35px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+}
+
+.paper h1 {
+  font-size: 36px;
+  color: #263446;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.paper hr {
+  border: none;
+  border-top: 1px solid #d8cdbb;
+  margin-bottom: 30px;
+}
+
+.paper p {
+  font-size: 25px;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: #15592f;
+  font-weight: bold;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  margin: 25px auto;
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: #14552f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 35px;
+}
+
+.signature p {
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.signature h2 {
+  color: #14552f;
+  font-size: 42px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .paper {
+    padding: 35px 28px;
+    border-radius: 50px 50px 25px 25px;
+  }
+
+  .paper h1 {
+    font-size: 27px;
+  }
+
+  .paper p {
+    font-size: 19px;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 11px 24px;
+  }
+
+  .envelope h1 {
+    font-size: 18px;
+  }
+
+  .envelope {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
